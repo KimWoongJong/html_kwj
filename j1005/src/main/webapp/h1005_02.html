@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>z-index</title>
+		<style>
+			*{margin:0; padding:0;}
+			div{width:300px; height:300px; border:1px solid black;
+				box-sizing: border-box; font-size: 30px; position: relative;}
+			.c01{background: red; left:100px; z-index:100;} /*z-index:(숫자) 숫자가 크면 무조건 가장 앞으로 온다 <- position이 먼저 사용되어야 z-index도 사용 가능*/
+			.c02{background: yellow; top:-100px; z-index:3;} /*z-index를 사용하지 않으면 <body>에서 가장 아래 있는 내용이 앞으로 나옴*/
+			.c03{background: green; left:250px; top:-450px; z-index:1;}
+		</style>
+	</head>
+	<body>
+		<div class="c01">1</div>
+		<div class="c02">2</div>
+		<div class="c03">3</div>
+	
+	</body>
+</html>
